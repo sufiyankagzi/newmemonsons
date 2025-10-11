@@ -1,0 +1,270 @@
+.main-navbar {
+  background: #E31E27;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.main-logo {
+  font-family: 'Cookie', sans-serif;
+  color: #fff;
+  font-size: 45px;
+}
+
+.main-logo:hover{
+  color: #E31E27 !important;
+}
+
+.menu-sub-text
+{
+  font-family: 'poppins';
+    font-size: 14px;  
+    font-weight: 600;
+    color: #ccc !important;
+    padding: 10px 10px !important;
+}
+
+.menu-sub-text:hover
+{
+
+    color: #000000 !important;
+    
+}
+
+
+.sub-text {
+  padding:13px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sub-text:hover
+{
+    background-color: #f5f4f4;
+    color: #E31E27 !important ;
+}
+
+.custom-dropdown .dropdown-menu {
+  border-radius: 0 !important;   
+  left: 0 !important;            
+  right: 0 !important;          
+  top: 57px !important;         
+  padding: 10px;                    
+  box-shadow: none;   
+}
+/* Optional: remove box shadow for a flatter look */
+.dropdown-menu {
+  box-shadow: none !important;
+}
+
+.navbar .dropdown-toggle::after {
+  display: none !important;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-container-mobile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+.search-input-mobile {
+  width: 100%;
+  /* max-width: 100%; */
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: width 0.3s ease;
+}
+
+.search-input-mobile::placeholder {
+  color: #000000; /* white */
+  opacity: 1; /* ensure full visibility */
+}
+
+
+.search-input {
+  width: 200px;
+  max-width: 250px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  transition: width 0.3s ease;
+}
+
+.search-input:focus {
+  width: 300px; /* expands smoothly when typing */
+}
+
+.search-input::placeholder {
+  color: #fff; /* white */
+  opacity: 1; /* ensure full visibility */
+}
+
+.navbar-nav .menu-sub-text .nav-link,
+.menu-sub-text .dropdown-toggle {
+  color: #f8f6f69d !important;
+  transition: color 0.3s ease; /* smooth color change */
+}
+
+.navbar-nav .menu-sub-text .nav-link:hover,
+.menu-sub-text .dropdown-toggle:hover {
+  color: #000 !important;
+}
+
+.social-text
+{
+  color: #f8f6f69d;
+  cursor: pointer;
+}
+
+.social-text:hover
+{
+  color: #000 !important;
+}
+
+
+/* THIS IS A OFF CANVAS MENU CSS */
+.offcanvas-container{
+  background-color: hsl(0, 0%, 100%) !important;
+}
+.offcanvas-menu-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  font-family: 'Poppins';
+  font-size: 15px;
+}
+
+.offlitext{
+  font-family: 'Poppins';
+  font-size: 14px;
+  border-bottom: 0.5px solid #ccc;
+}
+.offlitext:hover{
+  font-weight: 600;
+}
+.offcanvas-link {
+  color: #555;
+  /* color: #f9f9f9b5; */
+  
+  
+  transition: color 0.2s;
+}
+
+.offcanvas-link:hover {
+  color: #000;
+}
+
+.offcanvas.show .offcanvas-header .btn-close {
+  animation: spin 2s linear infinite;
+}
+
+/* Optional: add hover scaling effect too */
+.offcanvas.show .offcanvas-header .btn-close:hover {
+  transform: scale(1.2);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.brand-collection {
+  font-family: 'Cookie', sans-serif;
+  color: #E31E27; /* base color */
+  font-weight: 400;
+  font-size: 25px;
+  background: linear-gradient(
+    90deg,
+    #E31E27,
+    #0a0154,
+    #E31E27
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.brand-image {
+  /* max-width: 80%; keeps image inside container */
+  width: 400px !important;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border: 1px solid #555;
+}
+
+/* Optional hover effect */
+.brand-image:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.social-icon
+{
+  font-size: 25px;
+  font-weight: 200;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgb(188, 188, 188);
+  border-radius: 50%;
+  padding: 9px;
+}
+
+.social-instagram {
+  color: #E1306C; /* Instagram pink gradient (simplified as solid pink) */
+}
+
+.social-facebook {
+  color: #1877F2; /* Facebook blue */
+}
+
+.social-youtube {
+  color: #FF0000; /* YouTube red */
+}
+
+.social-whatsapp {
+  color: #25D366; /* WhatsApp green */
+}
+
+/* Optional hover effect */
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.offcanvas-utils
+{
+  background-color: #E31E27;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Poppins';
+  box-shadow: 1px 3px 4px rgba(0,0,0,0.1);
+  margin: 0 8px;
+  padding:15px 0px;
+  border: 0.5px solid #f0f0f0;
+}
+

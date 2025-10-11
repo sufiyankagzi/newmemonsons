@@ -1,0 +1,38 @@
+/* --- Slider Wrapper --- */
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* --- Slide Container --- */
+.slide-container {
+  position: relative;
+  height: 550px;
+  width: 100%;
+}
+
+/* --- Default Banner 1 & 2 Images --- */
+.banner1 .slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  content: url('../assets/img/Banner1.png');
+}
+
+.banner2 .slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  content: url('../assets/img/image2.png');
+}
+
+/* --- Mobile View (switch Banner1 → Banner11) --- */
+@media (max-width: 768px) {
+  .slide-container {
+    height: auto; /* adjust if needed */
+  }
+
+  .banner1 .slide-image {
+    content: url('../assets/img/Banner11.png');
+  }
+}
