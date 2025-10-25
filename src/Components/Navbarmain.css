@@ -1,16 +1,18 @@
 .main-navbar {
-  background: #E31E27;
+  /* background: #E31E27; */
+  background: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  top: 36px;
 }
 
 .main-logo {
   font-family: 'Cookie', sans-serif;
-  color: #fff;
+  color: black;
   font-size: 45px;
 }
 
 .main-logo:hover{
-  color: #E31E27 !important;
+  color: #0068CD !important;
 }
 
 .menu-sub-text
@@ -18,7 +20,7 @@
   font-family: 'poppins';
     font-size: 14px;  
     font-weight: 600;
-    color: #ccc !important;
+    color: #970606 !important;
     padding: 10px 10px !important;
 }
 
@@ -39,14 +41,14 @@
 .sub-text:hover
 {
     background-color: #f5f4f4;
-    color: #E31E27 !important ;
+    color: #0068CD !important ;
 }
 
 .custom-dropdown .dropdown-menu {
   border-radius: 0 !important;   
   left: 0 !important;            
   right: 0 !important;          
-  top: 57px !important;         
+  top:71px !important;         
   padding: 10px;                    
   box-shadow: none;   
 }
@@ -76,7 +78,7 @@
   /* max-width: 100%; */
   padding: 6px 12px;
   font-size: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #2f2e2e;
   border-radius: 10px;
   outline: none;
   transition: width 0.3s ease;
@@ -104,24 +106,30 @@
 }
 
 .search-input::placeholder {
-  color: #fff; /* white */
+  color: #737373; /* white */
   opacity: 1; /* ensure full visibility */
 }
 
+/* ✅ FIX: Make navbar text black */
 .navbar-nav .menu-sub-text .nav-link,
 .menu-sub-text .dropdown-toggle {
-  color: #f8f6f69d !important;
-  transition: color 0.3s ease; /* smooth color change */
+  color: #000 !important; /* solid black */
+  transition: color 0.3s ease;
+  padding: 15px 12px;
 }
 
+/* Optional hover effect */
 .navbar-nav .menu-sub-text .nav-link:hover,
 .menu-sub-text .dropdown-toggle:hover {
-  color: #000 !important;
+  
+  border-bottom: 3px solid #0068CD;
+
+  
 }
 
 .social-text
 {
-  color: #f8f6f69d;
+  color: #0707079d;
   cursor: pointer;
 }
 
@@ -184,14 +192,14 @@
 
 .brand-collection {
   font-family: 'Cookie', sans-serif;
-  color: #E31E27; /* base color */
+  color: #0068CD; /* base color */
   font-weight: 400;
   font-size: 25px;
   background: linear-gradient(
     90deg,
-    #E31E27,
+    #0068CD,
     #0a0154,
-    #E31E27
+    #0068CD
   );
   background-size: 200% auto;
   color: transparent;
@@ -257,7 +265,7 @@
 
 .offcanvas-utils
 {
-  background-color: #E31E27;
+  background-color: #0068CD;
   color: #fff;
   border-radius: 10px;
   font-size: 14px;
@@ -267,4 +275,5 @@
   padding:15px 0px;
   border: 0.5px solid #f0f0f0;
 }
+
 

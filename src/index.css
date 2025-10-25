@@ -11,5 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Corinthia:wght@400;700&family=Engagement&family=Uncial+Antiqua&display=swap');
 body {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding-top: 0px;
 }
 

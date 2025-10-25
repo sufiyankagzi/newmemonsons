@@ -1,31 +1,82 @@
 .main-head {
-  background-color: #E31E27;
+  background-color: #0068CD;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 015px;
+  padding: 0px;
   width: 100%;
   overflow: hidden;
-  position: sticky;    /* ✅ Instead of sticky */
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
 }
 
-.top-pill
-{
-  background-color: lab(100% 0.01 -0.01 / 0.562);
-  border-radius: 25px;
-  margin: 0px 50px;
-  
-  
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
+.search-container-mobile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+.search-input-mobile {
+  width: 100%;
+  /* max-width: 100%; */
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #2f2e2e;
+  border-radius: 10px;
+  outline: none;
+  transition: width 0.3s ease;
+}
+
+.search-input-mobile::placeholder {
+  color: #000000; /* white */
+  opacity: 1; /* ensure full visibility */
+}
+
+
+.search-input {
+  width: 200px;
+  max-width: 250px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  transition: width 0.3s ease;
+}
+
+.search-input:focus {
+  width: 300px; /* expands smoothly when typing */
+}
+
+.search-input::placeholder {
+  color: #737373; /* white */
+  opacity: 1; /* ensure full visibility */
+}
+
+
+
 .top-pill-text{
-  color: #5d0308 !important;
+  color: #fff !important;
   font-family: 'Roboto';
-  font-size: 5px;
+  font-size: 7px;
   font-weight: 600 !important;
+}
+
+.top-pill-text2{
+  color: #fff !important;
+  font-family: 'Roboto';
+  font-size: 7px;
+  font-weight: 400 !important;
 }
 
 .main-head p{

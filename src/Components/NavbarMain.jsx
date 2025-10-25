@@ -11,29 +11,42 @@ import { FiInstagram } from 'react-icons/fi'
 import { FaFacebookF } from 'react-icons/fa'
 import { AiFillYoutube } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
-import { FiTruck } from 'react-icons/fi'
-import { GiReturnArrow } from 'react-icons/gi'
-import { FaRupeeSign } from 'react-icons/fa'
-import { RiSecurePaymentFill } from 'react-icons/ri'
+import logo from "../assets/img/logo.png"
 import './NavbarMain.css'
 const NavbarMain = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
-    const dropdownData = [{ title: "Men", items: [{ label: "Shoes", path: "/" }, { label: "Sandals", path: "/" }, { label: "Loafers", path: "/" }, { label: "Sneakers", path: "/" }, { label: "Slides", path: "/" }, { label: "Chappals", path: "/" }, { label: "Flip Flops", path: "/" },] }, { title: "Women", items: [{ label: "Shoes", path: "/" }, { label: "Sandals", path: "/" }, { label: "Loafers", path: "/" }, { label: "Sneakers", path: "/" }, { label: "Slides", path: "/" }, { label: "Chappals", path: "/" }, { label: "Flip Flops", path: "/" },] }, { title: "Kids", items: [{ label: "Shoes", path: "/" }, { label: "Sandals", path: "/" }, { label: "Loafers", path: "/" }, { label: "Sneakers", path: "/" }, { label: "Slides", path: "/" }, { label: "Chappals", path: "/" }, { label: "Flip Flops", path: "/" },] }, { title: "Brand", items: [{ label: "Lexa", path: "/" }, { label: "Campus", path: "/" }, { label: "Skeroo", path: "/" }, { label: "ADDA", path: "/" }, { label: "Abros", path: "/" }, { label: "Walkaroo", path: "/" }, { label: "Feet 4 Ever", path: "/" }, { label: "Kids Lounge", path: "/" }, { label: "Red Tape", path: "/" },] }, { title: "Sale", items: [{ label: "Under 999", path: "/" }, { label: "Under 1499", path: "/" }, { label: "Under 1999", path: "/" }, { label: "Pre Festive Deal", path: "/" },] },];
+    const dropdownData = [
+        { title: "Men", items: [{ label: "Shoes", path: "/" }, { label: "Sandals", path: "/" }, { label: "Loafers", path: "/" }, { label: "Sneakers", path: "/" }, { label: "Slides", path: "/" }, { label: "Chappals", path: "/" }, { label: "Flip Flops", path: "/" },] },
+        { title: "Women", items: [{ label: "Shoes", path: "/" }, { label: "Sandals", path: "/" }, { label: "Loafers", path: "/" }, { label: "Sneakers", path: "/" }, { label: "Slides", path: "/" }, { label: "Chappals", path: "/" }, { label: "Flip Flops", path: "/" },] },
+        { title: "Kids", items: [{ label: "Shoes", path: "/" }, { label: "Sandals", path: "/" }, { label: "Loafers", path: "/" }, { label: "Sneakers", path: "/" }, { label: "Slides", path: "/" }, { label: "Chappals", path: "/" }, { label: "Flip Flops", path: "/" },] },
+        { title: "Brand", items: [{ label: "Lexa", path: "/" }, { label: "Campus", path: "/" }, { label: "Skeroo", path: "/" }, { label: "ADDA", path: "/" }, { label: "Abros", path: "/" }, { label: "Walkaroo", path: "/" }, { label: "Feet 4 Ever", path: "/" }, { label: "Kids Lounge", path: "/" }, { label: "Red Tape", path: "/" },] },
+        { title: "Sale", items: [{ label: "Under 999", path: "/" }, { label: "Under 1499", path: "/" }, { label: "Under 1999", path: "/" }, { label: "Pre Festive Deal", path: "/" },] },
+        { title: "New Arrival", items: [{ label: "Men", path: "/" }, { label: "Women", path: "/" }, { label: "Kids", path: "/" },] },
+    ];
     return (
         <>
             <Navbar expand="lg" sticky="top" className="main-navbar border-0 m-0 px-2 py-0 border">
                 <Container fluid className="d-flex align-items-center justify-content-between">
                     {/* NAV BAR MAIN */}
-                    <div className="d-flex align-items-center justify-content-start col-4">
+                    <div className="d-flex d-block align-items-center justify-content-start col-4">
                         <div className='d-flex justify-content-start d-block d-lg-none'>
                             <CgMenuLeft className="fs-2 social-text" style={{ cursor: 'pointer' }} onClick={() => setIsOpen(true)} />
                         </div>
                         <Navbar.Collapse id="basic-navbar-nav" className="m-0 px-0 py-0">
-                            <Nav className="d-flex align-items-center menu-text">
+                            <Nav className="d-flex w-100 justify-content-center align-items-center menu-text text-dark">
                                 {dropdownData.map((menu, index) => (
-                                    <NavDropdown key={index} title={<span className={`${menu.title === "Sale" ? "text-white" : ""}`}>{menu.title}</span>} id={`nav-dropdown-${index}`} className="dropdown-container menu-sub-text custom-dropdown p-0 px-2 py-0 m-0" show={openDropdown === index} onMouseEnter={() => setOpenDropdown(index)} onMouseLeave={() => setOpenDropdown(null)}>
+                                    <NavDropdown
+                                        key={index}
+                                        title={
+                                            <span
+                                                className={`${menu.title === "Sale" ? "text-danger" : "text-dark"
+                                                    }`}
+                                            >
+                                                {menu.title}
+                                            </span>
+                                        }id={`nav-dropdown-${index}`} className="dropdown-container menu-sub-text custom-dropdown p-0 px-2 py-0 m-0" show={openDropdown === index} onMouseEnter={() => setOpenDropdown(index)} onMouseLeave={() => setOpenDropdown(null)}>
                                         {menu.items.map((item, itemIndex) => (
                                             <Link key={itemIndex} to={item.path} className="dropdown-item sub-text px-3 py-2">{item.label}</Link>
                                         ))}
@@ -41,19 +54,28 @@ const NavbarMain = () => {
                                 ))}
                             </Nav>
                         </Navbar.Collapse>
+
                     </div>
                     {/* BRAND NAME LOGO LINK */}
                     <div className="d-flex justify-content-center align-items-center col-4 text-center ">
-                        <Navbar.Brand className="m-0 px-0 py-0">
-                            <Link to="/" className="main-logo text-decoration-none">Humique</Link>
+                        <Navbar.Brand className="m-0 px-0 py-2">
+                            <img src={logo} alt="Memon Sons" className='p-1' style={{ width: "135px", cursor: "pointer" }} />
                         </Navbar.Brand>
                     </div>
                     {/* LOGIN WISHLIST SEARCH CART */}
                     <div className="d-flex align-items-center justify-content-end col-4 icon-col">
-                        <div className="search-container d-flex align-items-center d-none d-lg-block">
-                            <IoSearchOutline className="fs-4 mx-2 social-text" />
-                            <input type="text" className="search-input social-text" placeholder="Search for products..." style={{ backgroundColor: "transparent", color: "#fff" }} />
-                        </div>
+                        
+                            <div className="search-container justify-content-end d-none d-lg-block  d-flex align-items-center">
+                                <IoSearchOutline className="fs-4 mx-2 social-text" />
+                                <input
+                                    type="text"
+                                    className="search-input social-text flex-grow-1"
+                                    placeholder="Search for products..."
+                                    style={{ backgroundColor: "transparent", color: "black", fontFamily:"Poppins"  }}
+                                />
+                                
+                            </div>
+                       
                         <BiUser className="fs-4 mx-2 social-text" />
                         <IoIosHeartEmpty className="fs-4 mx-2 social-text" />
                         <div className="position-relative text-center">
@@ -99,23 +121,23 @@ const NavbarMain = () => {
                     </Nav>
                     <Row className='my-2 py-2'>
                         <Col className='offcanvas-utils text-center'>
-                            <IoIosHeartEmpty className='fs-4 mb-2'/>
+                            <IoIosHeartEmpty className='fs-4 mb-2' />
                             <p className='p-0 m-0'>My Wishlist</p>
                         </Col>
                         <Col className='offcanvas-utils text-center'>
-                            <PiHandbag className='fs-4 mb-2'/>
+                            <PiHandbag className='fs-4 mb-2' />
                             <p className='p-0 m-0'>My Cart</p>
                         </Col>
                         <Col className='offcanvas-utils text-center'>
-                            <BiUser className='fs-4 mb-2'/>
+                            <BiUser className='fs-4 mb-2' />
                             <p className='p-0 m-0'>My Account</p>
                         </Col>
                     </Row>
 
                     <div className='bg-white'>
-                        <p className='px-2' style={{fontFamily:"Poppins", fontSize:"13.5px", fontWeight:"500",cursor:"pointer"}}>Contact Us</p>
-                        <p className='px-2' style={{fontFamily:"Poppins", fontSize:"13.5px", fontWeight:"500",cursor:"pointer"}}>Humique's Story</p>
-                        <p className='px-2' style={{fontFamily:"Poppins", fontSize:"13.5px", fontWeight:"500", cursor:"pointer"}}>Log In</p>
+                        <p className='px-2' style={{ fontFamily: "Poppins", fontSize: "13.5px", fontWeight: "500", cursor: "pointer" }}>Contact Us</p>
+                        <p className='px-2' style={{ fontFamily: "Poppins", fontSize: "13.5px", fontWeight: "500", cursor: "pointer" }}>Humique's Story</p>
+                        <p className='px-2' style={{ fontFamily: "Poppins", fontSize: "13.5px", fontWeight: "500", cursor: "pointer" }}>Log In</p>
                     </div>
                     <div className='text-center m-0 mt-2 p-0'>
                         <p className='m-0 p-0 brand-collection'>Get in Touch</p>
@@ -123,16 +145,16 @@ const NavbarMain = () => {
 
                     <div className='d-flex flex-wrap m-0 p-0 px-5 mt-2'>
                         <div className="col-3 m-0 p-2  d-flex justify-content-center align-items-center">
-                            <FiInstagram className='social-icon social-instagram'/>
+                            <FiInstagram className='social-icon social-instagram' />
                         </div>
                         <div className="col-3 m-0 p-2  d-flex justify-content-center align-items-center">
-                            <FaFacebookF className='social-icon social-facebook'/>
+                            <FaFacebookF className='social-icon social-facebook' />
                         </div>
                         <div className="col-3 m-0 p-2  d-flex justify-content-center align-items-center">
-                            <AiFillYoutube className='social-icon social-youtube'/>
+                            <AiFillYoutube className='social-icon social-youtube' />
                         </div>
                         <div className="col-3 m-0 p-2  d-flex justify-content-center align-items-center">
-                            <IoLogoWhatsapp className='social-icon social-whatsapp '/>
+                            <IoLogoWhatsapp className='social-icon social-whatsapp ' />
                         </div>
                     </div>
                 </Offcanvas.Body>
