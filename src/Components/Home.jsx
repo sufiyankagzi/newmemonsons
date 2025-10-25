@@ -7,6 +7,7 @@ const Home = () => {
       <MainPageSlider/>
       <p>Sufiyan</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur incidunt, debitis voluptas repellendus quo modi tempore? Magni aperiam fuga non a ab. Delectus blanditiis nemo, accusantium corrupti minima expedita quae.</p>
+      <h1>my name is usman</h1>
     </>
   )
 
